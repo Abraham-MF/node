@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilos.css">
+    <title>Proyecto de Programacion web 2</title>
+</head>
+<body>
+    <h1>Lista de usuarios</h1>
+    <center>
+    <div class="table-responsive-md">
+        <table class="table table-striped table-hover">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Email</th>
+                <th>Numero</th>
+                <th>Direccion</th>
+                <th>Ciudad</th>
+                <th>CP</th>
+                <th>Edad</th>
+                <th>Genero</th>
+            </tr>
+            <% users.forEach(user => { %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.nombre %></td>
+                    <td><%= user.apellido_paterno %></td> 
+                    <td><%= user.apellido_materno %></td> 
+                    <td><%= user.email %></td> 
+                    <td><%= user.tel %></td> 
+                    <td><%= user.direccion %></td> 
+                    <td><%= user.ciudad %></td> 
+                    <td><%= user.codigo_postal %></td> > 
+                    <td><%= user.edad %></td> 
+                    <td><%= user.genero %></td> 
+                    <td>
+                        <a href="/edit/<%= user.id %>">Editar</a> |
+                        <a href="/delete/<%= user.id %>">Eliminar</a>
+                    </td>
+                </tr>
+                <% }); %>
+            </table>
+    </div>
+    </center>
+        <h2>Agregar Nuevo Usuario</h2>
+
+        <center>
+        <a href="/CUser">Haz clic aquí para agregar un nuevo usuario</a>
+        <center>
+
+
+        
+</body>
+</html>
